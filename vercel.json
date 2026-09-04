@@ -3,7 +3,15 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://thermo-packers-backend.onrender.com/api/$1"
+      "dest": "https://your-backend.onrender.com/api/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)\\.(js|css|woff2|woff|ttf|png|jpg|jpeg|gif|svg|ico|json)$",
+      "dest": "/$1.$2"
     },
     {
       "src": "/(.*)",
