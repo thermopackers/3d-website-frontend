@@ -15,7 +15,6 @@ export default defineConfig({
       },
     },
   },
-  // ✅ Production optimizations
   build: {
     outDir: 'dist',
     sourcemap: false,
@@ -23,20 +22,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Split vendor chunks for better caching
           vendor: ['react', 'react-dom', 'react-router-dom'],
           animations: ['framer-motion'],
           icons: ['react-icons'],
         },
       },
     },
-    // Reduce chunk size warning limit
     chunkSizeWarningLimit: 1000,
   },
-  // ✅ Optimize dependencies
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'axios'],
-  },
-  // ✅ Environment variables prefix
-  envPrefix: 'VITE_',
+  // ✅ Important: Ensure base path is correct
+  base: '/',
 })
