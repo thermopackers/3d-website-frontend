@@ -21,6 +21,7 @@ import {
   Gift,
   ClipboardList
 } from "lucide-react";
+import logo from '/images/kind-earth-logo.png';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -247,8 +248,8 @@ export default function Navbar() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className='p-2 rounded-lg' onClick={() => navigate("/")}>
-  <img src="/images/Kind Earth Logo.PNG" alt="Logo" className="w-10 h-10" />
+             <div className='p-2 rounded-lg' onClick={() => navigate("/")}>
+  <img src={logo} alt="Logo" className="w-10 h-10" />
 </div>
               {/* <span 
                 className="font-bold text-xl cursor-pointer"
