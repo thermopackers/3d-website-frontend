@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Apply fonts to the entire page */
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Or use a more specific selector */
+* {
+  font-family: "Comfortaa", sans-serif;
+}
+
+/* If you want different font for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+}
+
+/* Or use the Indie Flower font for specific elements */
+.indie-flower {
+  font-family: "Indie Flower", cursive;
+}
