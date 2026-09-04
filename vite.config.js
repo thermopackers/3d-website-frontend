@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/', // ✅ Explicit base path
   server: {
     port: 5173,
     proxy: {
@@ -18,18 +18,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          animations: ['framer-motion'],
-          icons: ['react-icons'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
+    assetsDir: 'assets',
   },
-  // ✅ Important: Ensure base path is correct
-  base: '/',
 })
